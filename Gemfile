@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -68,5 +68,11 @@ group :test do
   gem "webdrivers"
 end
 
+# Framework library to work with JavaScript
 gem "esbuild-rails", "~> 0.1.4"
 gem 'bootstrap', '~> 4.0.0'
+# "The simplest way to group temporal data"
+gem 'groupdate', '~> 6.2'
+# "Create beautiful JavaScript charts with one line of Ruby"
+gem 'chartkick', '~> 5.0', '>= 5.0.1'
+gem 'byebug', '~> 11.1', '>= 11.1.3'

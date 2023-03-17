@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Automobiles</h1>
+
+<div id="automobiles">
+  <% @automobiles.each do |automobile| %>
+    <%= render automobile %>
+    <p>
+      <%= link_to "Show this automobile", automobile %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New automobile", new_automobile_path %>
+<% car_list = Automobile.all.map do |car| [car.price, car.horse_power] end %>
+<%= line_chart car_list %>

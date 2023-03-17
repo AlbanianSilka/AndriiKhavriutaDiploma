@@ -6,6 +6,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "chart.js": "^4.2.1",
+    "chartkick": "^5.0.1",
     "esbuild": "^0.17.11"
   }
 }
