@@ -7,3 +7,5 @@ import "bootstrap/dist/css/bootstrap.css"
 import "chartkick"
 // import "Chart.bundle"
 import "chartkick/chart.js"
+import 'chart.js/auto'
+import "./packs/generate-indicator"
