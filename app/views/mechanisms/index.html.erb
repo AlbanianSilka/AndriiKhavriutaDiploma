@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Mechanisms</h1>
+
+<div id="mechanisms">
+  <% @mechanisms.each do |mechanism| %>
+    <%= render mechanism %>
+    <p>
+      <%= link_to "Show this mechanism", mechanism %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New mechanism", new_mechanism_path %>

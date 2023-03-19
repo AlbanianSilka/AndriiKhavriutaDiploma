@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @mechanism %>
+
+<div>
+  <%= link_to "Edit this mechanism", edit_mechanism_path(@mechanism) %> |
+  <%= link_to "Back to mechanisms", mechanisms_path %>
+
+  <%= button_to "Destroy this mechanism", @mechanism, method: :delete %>
+</div>

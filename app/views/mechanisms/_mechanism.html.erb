@@ -1,0 +1,21 @@
+<div id="container_ind">
+  <% mechanism.indicators.each do |indicator| %>
+    <p>
+
+    </p>
+    <div class="indicator_box" style="position:relative;">
+      <div class="y-value" style="position:absolute; left:<%= indicator.x_value %>px; top:<%= indicator.y_value %>px;">
+        <%= indicator.y_value %>
+      </div>
+    </div>
+    </div>
+  <% end %>
+</div>
+
+<div id="<%= dom_id mechanism %>">
+  <p>
+    <strong>Name:</strong>
+    <%= mechanism.name %>
+    <%= image_tag url_for(mechanism.mechanism_image) %>
+  </p>
+</div>

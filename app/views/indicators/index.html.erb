@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Indicators</h1>
+
+<div id="indicators">
+  <% @indicators.each do |indicator| %>
+    <%= render indicator %>
+    <p>
+      <%= link_to "Show this indicator", indicator %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New indicator", new_indicator_path %>

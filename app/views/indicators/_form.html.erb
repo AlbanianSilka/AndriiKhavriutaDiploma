@@ -1,0 +1,22 @@
+<%= form_with(model: indicator) do |form| %>
+  <% if indicator.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(indicator.errors.count, "error") %> prohibited this indicator from being saved:</h2>
+
+      <ul>
+        <% indicator.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :mechanism_id, style: "display: block" %>
+    <%= form.select :mechanism_id, Mechanism.all.collect { |m| [m.name, m.id] }, {}, {class: "form-control"} %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
