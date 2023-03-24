@@ -9,3 +9,4 @@ import "chartkick"
 import "chartkick/chart.js"
 import 'chart.js/auto'
 import "./packs/generate-indicator"
+import "./packs/generate-graph"

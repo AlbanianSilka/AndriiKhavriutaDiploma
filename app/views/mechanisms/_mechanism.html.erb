@@ -4,10 +4,18 @@
 
     </p>
     <div class="indicator_box" style="position:relative;">
-      <div class="y-value" style="position:absolute; left:<%= indicator.x_value %>px; top:<%= indicator.y_value %>px;">
-        <%= indicator.y_value %>
+      <div class="indicator-value" style="position:absolute; left:<%= indicator.x_value %>px;top:<%= indicator.y_value %>px;">
+        <%= indicator.values %>
       </div>
-    </div>
+      <button class="graph-button" data-values="<%= indicator.values %>"
+              data-x-value="<%= indicator.x_value %>" data-y-value="<%= indicator.y_value %>"
+      style="
+      position:absolute;
+      left:<%= indicator.x_value %>px;
+        top:<%= indicator.y_value %>px; top:<%= indicator.y_value %>px;
+      margin-top: 25px">
+        Draw Graph
+      </button>
     </div>
   <% end %>
 </div>
@@ -19,3 +27,13 @@
     <%= image_tag url_for(mechanism.mechanism_image) %>
   </p>
 </div>
+
+
+<style>
+    #chart {
+        position: absolute;
+        max-width: 300px;
+        max-height: 300px;
+        z-index: 1;
+    }
+</style>

@@ -1,3 +1,0 @@
-class Automobile < ApplicationRecord
-
-end
