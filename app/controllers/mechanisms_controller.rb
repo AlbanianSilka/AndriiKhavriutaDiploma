@@ -7,8 +7,7 @@ class MechanismsController < ApplicationController
   end
 
   # GET /mechanisms/1 or /mechanisms/1.json
-  def show
-  end
+  def show; end
 
   # GET /mechanisms/new
   def new
@@ -16,8 +15,7 @@ class MechanismsController < ApplicationController
   end
 
   # GET /mechanisms/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /mechanisms or /mechanisms.json
   def create
@@ -58,13 +56,14 @@ class MechanismsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_mechanism
-      @mechanism = Mechanism.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def mechanism_params
-      params.require(:mechanism).permit(:name, :mechanism_image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_mechanism
+    @mechanism = Mechanism.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def mechanism_params
+    params.require(:mechanism).permit(:name, :mechanism_image)
+  end
 end

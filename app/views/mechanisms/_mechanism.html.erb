@@ -4,10 +4,10 @@
 
     </p>
     <div class="indicator_box" style="position:relative;">
-      <div class="indicator-value" style="position:absolute; left:<%= indicator.x_value %>px;top:<%= indicator.y_value %>px;">
-        <%= indicator.values %>
+      <div class="indicator-value" id="<%= "indicator_id_#{indicator.id}" %>" style="position:absolute; left:<%= indicator.x_value %>px;top:<%= indicator.y_value %>px;">
+        <%= indicator.values.last %>
       </div>
-      <button class="graph-button" data-values="<%= indicator.values %>"
+      <button class="graph-button" id="indicator_btn_<%=indicator.id %>" data-values="<%= indicator.values.last(10) %>"
               data-x-value="<%= indicator.x_value %>" data-y-value="<%= indicator.y_value %>"
       style="
       position:absolute;

@@ -4,11 +4,7 @@ document.addEventListener("click", function(event) {
     const currentUrl = window.location.href;
     if (currentUrl.includes("/mechanisms/")) {
         if (event.target.tagName !== "INPUT" && event.target.tagName !== "BUTTON") {
-            const values = "[" + Array.from({length: 10}, () => Math.floor(Math.random() * 10) + 1).toString()
-                + "]";
-            const valuesStr = JSON.stringify(values);
             const target = event.target;
-            target.setAttribute("data-values", valuesStr);
             $.ajax({
                 url: "/indicators",
                 type: "POST",
@@ -16,8 +12,7 @@ document.addEventListener("click", function(event) {
                     indicator: {
                         mechanism_id: currentUrl.split("/").pop(),
                         x_value: event.pageX,
-                        y_value: event.pageY,
-                        values: values
+                        y_value: event.pageY
                     }
                 },
                 dataType: "json",

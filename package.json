@@ -5,6 +5,7 @@
     "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds"
   },
   "dependencies": {
+    "@rails/actioncable": "^7.0.4-3",
     "bootstrap": "^5.2.3",
     "chart.js": "^4.2.1",
     "chartkick": "^5.0.1",

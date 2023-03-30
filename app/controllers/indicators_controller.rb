@@ -8,8 +8,7 @@ class IndicatorsController < ApplicationController
   end
 
   # GET /indicators/1 or /indicators/1.json
-  def show
-  end
+  def show; end
 
   # GET /indicators/new
   def new
@@ -17,8 +16,7 @@ class IndicatorsController < ApplicationController
   end
 
   # GET /indicators/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /indicators or /indicators.json
   def create
@@ -59,13 +57,14 @@ class IndicatorsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_indicator
-      @indicator = Indicator.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def indicator_params
-      params.require(:indicator).permit(:values, :mechanism_id, :x_value, :y_value)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_indicator
+    @indicator = Indicator.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def indicator_params
+    params.require(:indicator).permit(:values, :mechanism_id, :x_value, :y_value)
+  end
 end

@@ -36,3 +36,4 @@
 
 /app/assets/builds
 /config/credentials.yml.enc
+.idea
