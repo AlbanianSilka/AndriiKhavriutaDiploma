@@ -2,23 +2,16 @@ class IndicatorsController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_indicator, only: %i[ show edit update destroy ]
 
-  # GET /indicators or /indicators.json
   def index
     @indicators = Indicator.all
   end
 
-  # GET /indicators/1 or /indicators/1.json
   def show; end
 
-  # GET /indicators/new
   def new
     @indicator = Indicator.new
   end
 
-  # GET /indicators/1/edit
-  def edit; end
-
-  # POST /indicators or /indicators.json
   def create
     @indicator = Indicator.new(indicator_params)
 
@@ -33,7 +26,6 @@ class IndicatorsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /indicators/1 or /indicators/1.json
   def update
     respond_to do |format|
       if @indicator.update(indicator_params)
@@ -46,7 +38,6 @@ class IndicatorsController < ApplicationController
     end
   end
 
-  # DELETE /indicators/1 or /indicators/1.json
   def destroy
     @indicator.destroy
 
@@ -58,12 +49,10 @@ class IndicatorsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_indicator
     @indicator = Indicator.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def indicator_params
     params.require(:indicator).permit(:values, :mechanism_id, :x_value, :y_value)
   end
