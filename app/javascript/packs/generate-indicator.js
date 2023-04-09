@@ -21,7 +21,7 @@ document.addEventListener("click", function(event) {
                     const container = document.getElementById("container_ind");
                     const indicatorBox = document.createElement("div");
                     const valuesBox = document.createElement("div");
-                    const valuesBoxText = document.createTextNode(target.getAttribute("data-values").replace(/^\"(.*)\"$/, '$1'));
+                    const valuesBoxText = document.createTextNode(response.values[0]);
 
                     indicatorBox.className = "indicator_box";
                     indicatorBox.style.position = "absolute";
